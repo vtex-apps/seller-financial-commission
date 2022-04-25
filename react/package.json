@@ -1,5 +1,5 @@
 {
-  "name": "CHANGE_ME",
+  "name": "seller-financial-commission",
   "version": "0.0.0",
   "scripts": {
     "test": "vtex-test-tools test"
@@ -20,6 +20,7 @@
     "@vtex/tsconfig": "^0.4.4",
     "apollo-cache-inmemory": "^1.6.5",
     "graphql": "^14.6.0",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.6",
+    "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.132.4/public/@types/vtex.render-runtime"
   }
 }
