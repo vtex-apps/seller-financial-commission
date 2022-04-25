@@ -6,7 +6,8 @@
   "description": "",
   "builders": {
     "react": "3.x",
-    "docs": "0.x"
+    "docs": "0.x",
+    "admin": "0.x"
   },
   "dependencies": {
     "vtex.marketplace-financial-commission": "0.x"
@@ -15,5 +16,14 @@
     "smartcheckout"
   ],
   "policies": [],
+  "billingOptions": {
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "type": "free",
+    "availableCountries": [
+      "*"
+    ]
+  },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
