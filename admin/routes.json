@@ -1,0 +1,6 @@
+{
+  "admin.app.detail": {
+    "component": "commissionDetail",
+    "path": "/admin/app/commission-detail"
+  }
+}

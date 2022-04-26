@@ -1,0 +1,14 @@
+[
+  {
+    "adminVersion": 4,
+    "section": "orders",
+    "titleId": "admin/navigation.section-title",
+    "subSection": "commissionDetail",
+    "subSectionItems": [
+      {
+        "labelId": "admin/navigation.detail-title",
+        "path": "/admin/commission-detail"
+      }
+    ]
+  }
+]

@@ -4852,7 +4852,7 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@^3.9.6, typescript@^3.9.7:
+typescript@3.9.7, typescript@^3.9.7:
   version "3.9.7"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
   integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
@@ -4946,9 +4946,17 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
+"vtex.marketplace-financial-commission@https://sanztest--elefantqa.myvtex.com/_v/private/typings/linked/v1/vtex.marketplace-financial-commission@0.0.1+build1649857638/public/@types/vtex.marketplace-financial-commission":
+  version "0.0.1"
+  resolved "https://sanztest--elefantqa.myvtex.com/_v/private/typings/linked/v1/vtex.marketplace-financial-commission@0.0.1+build1649857638/public/@types/vtex.marketplace-financial-commission#45cf7341cf3794c35337cb66ce764d124728862c"
+
 "vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.132.4/public/@types/vtex.render-runtime":
   version "8.132.4"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.132.4/public/@types/vtex.render-runtime#66bb41bd4d342e37c9d85172aad5f7eefebfb6dc"
+
+"vtex.seller-financial-commission@https://sanztest--elefantqa.myvtex.com/_v/private/typings/linked/v1/vtex.seller-financial-commission@0.0.0+build1650971666/public/@types/vtex.seller-financial-commission":
+  version "0.0.0"
+  resolved "https://sanztest--elefantqa.myvtex.com/_v/private/typings/linked/v1/vtex.seller-financial-commission@0.0.0+build1650971666/public/@types/vtex.seller-financial-commission#bea4e3e642116dea99a85b0f1d3c63b5209a1e77"
 
 w3c-hr-time@^1.0.1:
   version "1.0.2"

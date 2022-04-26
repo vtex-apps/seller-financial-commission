@@ -1,4 +1,4 @@
 {
-  "admin/test": "test",
-  "store/test": "test"
+  "admin/navigation.section-title": "Financial commission",
+  "admin/navigation.detail-title": "Detail"
 }
