@@ -7,23 +7,29 @@
   "builders": {
     "react": "3.x",
     "docs": "0.x",
-    "admin": "0.x"
+    "admin": "0.x",
+    "node": "6.x",
+    "graphql": "1.x"
   },
   "dependencies": {
     "vtex.marketplace-financial-commission": "0.x"
   },
-  "registries": [
-    "smartcheckout"
+  "registries": ["smartcheckout"],
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/fulfillment/pvt/affiliates"
+      }
+    }
   ],
-  "policies": [],
   "billingOptions": {
     "support": {
       "url": "https://support.vtex.com/hc/requests"
     },
     "type": "free",
-    "availableCountries": [
-      "*"
-    ]
+    "availableCountries": ["*"]
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

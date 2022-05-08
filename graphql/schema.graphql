@@ -1,0 +1,18 @@
+type Query {
+  """
+  Request the marketplace to retrieve current seller's invoices
+  """
+  sellerInvoices(pagination: Pagination, dates: Dates!): [Invoice]
+    @cacheControl(scope: PRIVATE, maxAge: LONG)
+  """
+  Request the marketplace to retrieve an Invoice
+  """
+  getInvoice(id: String!): Invoice @cacheControl(scope: PRIVATE, maxAge: SHORT)
+}
+
+type Mutation {
+  """
+  Request the marketplace to create an Invoice
+  """
+  createInvoice(invoiceData: InvoiceData!): String
+}
