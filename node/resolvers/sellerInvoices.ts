@@ -1,8 +1,8 @@
-import { SellerInvoicesParams } from '../typings/custom'
+import { InvoiceFilterParams } from '../typings/custom'
 
 export const sellerInvoices = async (
   _: unknown,
-  params: SellerInvoicesParams,
+  params: InvoiceFilterParams,
   ctx: Context
 ) => {
   const {
@@ -17,12 +17,12 @@ export const sellerInvoices = async (
     workspace,
   }
 
-  const body = { ...params.dates, ...params.pagination }
+  const filter = { ...params.dates, ...params.pagination }
 
   const invoices = await marketplace.invoicesBySeller(
     sellerAccount,
     marketplaceReference,
-    body
+    filter
   )
 
   return invoices

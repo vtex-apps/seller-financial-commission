@@ -1,5 +1,7 @@
 import { AuthType, InstanceOptions, IOClient, IOContext } from '@vtex/api'
 
+import { FlatFilters, InvoiceData } from '../../typings/custom'
+
 const useHttps = !process.env.VTEX_IO
 
 interface MarketplaceReference {
@@ -43,7 +45,7 @@ export default class MarketplaceAppClient extends IOClient {
   public async createInvoice(
     sellerId: string,
     marketplaceReference: MarketplaceReference,
-    invoiceData: any
+    invoiceData: InvoiceData
   ) {
     return this.http.post(
       this.routes.newInvoice(sellerId, marketplaceReference),
@@ -54,16 +56,12 @@ export default class MarketplaceAppClient extends IOClient {
   public async invoicesBySeller(
     sellerId: string,
     marketplaceReference: MarketplaceReference,
-    bodyData: any
+    filters: FlatFilters
   ) {
     return this.http.post(
       this.routes.invoices(sellerId, marketplaceReference),
-      bodyData
+      filters
     )
-  }
-
-  public async test() {
-    return this.http.get(`/elefantqa/sanz/_v/test`)
   }
 
   private get routes() {

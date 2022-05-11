@@ -1,6 +1,6 @@
 export type Maybe<T> = T | void
 
-export interface SellerInvoicesParams {
+export interface InvoiceFilterParams {
   pagination: {
     page: number
     pageSize: number
@@ -9,4 +9,19 @@ export interface SellerInvoicesParams {
     startDate: string
     endDate: string
   }
+}
+
+export interface InvoiceData {
+  id: string
+  name: string
+  email: string
+  startDate: string
+  endDate: string
+}
+
+export interface FlatFilters {
+  page?: number
+  pageSize?: number
+  startDate: string
+  endDate: string
 }

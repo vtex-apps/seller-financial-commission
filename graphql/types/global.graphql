@@ -1,7 +1,33 @@
-"""
-@todo import types
-"""
-scalar Pagination
-scalar Dates
-scalar Invoice
-scalar InvoiceData
+input Pagination {
+  page: Int
+  pageSize: Int
+}
+
+input Dates {
+  startDate: String
+  endDate: String
+}
+
+type Invoice {
+  status: String
+  invoiceCreatedDate: String
+  seller: SellerInvoiceData
+  orders: [Order]
+  totalizers: Totalizers
+  comment: String
+}
+
+type InvoiceList {
+  id: String
+  status: String
+  invoiceCreatedDate: String
+  totalizers: Totalizers
+}
+
+input InvoiceDataInput {
+  id: String
+  name: String
+  email: String
+  startDate: String
+  endDate: String
+}

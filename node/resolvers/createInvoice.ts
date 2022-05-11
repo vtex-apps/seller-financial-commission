@@ -1,5 +1,7 @@
+import { InvoiceData } from '../typings/custom'
+
 interface CreateInvoiceInput {
-  invoiceData: any
+  invoiceData: InvoiceData
 }
 
 export const createInvoice = async (

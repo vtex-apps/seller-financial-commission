@@ -2,7 +2,7 @@ type Query {
   """
   Request the marketplace to retrieve current seller's invoices
   """
-  sellerInvoices(pagination: Pagination, dates: Dates!): [Invoice]
+  sellerInvoices(pagination: Pagination, dates: Dates!): [InvoiceList]
     @cacheControl(scope: PRIVATE, maxAge: LONG)
   """
   Request the marketplace to retrieve an Invoice
@@ -14,5 +14,5 @@ type Mutation {
   """
   Request the marketplace to create an Invoice
   """
-  createInvoice(invoiceData: InvoiceData!): String
+  createInvoice(invoiceData: InvoiceDataInput!): String
 }
