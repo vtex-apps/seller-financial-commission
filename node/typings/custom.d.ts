@@ -25,3 +25,14 @@ export interface FlatFilters {
   startDate: string
   endDate: string
 }
+
+export interface OrderFilterParams {
+  searchOrdersParams: {
+    dateStart: string
+    dateEnd: string
+    sellerName: string
+    page: number
+    perpage: number
+    status?: string
+  }
+}

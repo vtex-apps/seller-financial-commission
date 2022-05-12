@@ -8,6 +8,11 @@ type Query {
   Request the marketplace to retrieve an Invoice
   """
   getInvoice(id: String!): Invoice @cacheControl(scope: PRIVATE, maxAge: SHORT)
+  """
+  Retrieve orders to seller
+  """
+  sellerOrders(searchOrdersParams: SearchOrdersInput): PaginatedOrders
+    @cacheControl(scope: PRIVATE, maxAge: LONG)
 }
 
 type Mutation {

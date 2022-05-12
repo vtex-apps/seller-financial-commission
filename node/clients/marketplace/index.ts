@@ -64,6 +64,16 @@ export default class MarketplaceAppClient extends IOClient {
     )
   }
 
+  public async sellerOrders(
+    sellerId: string,
+    marketplaceReference: MarketplaceReference,
+    queryString: string
+  ) {
+    return this.http.get(
+      this.routes.orders(sellerId, marketplaceReference, queryString)
+    )
+  }
+
   private get routes() {
     const baseRoute = `_v/financial-commission`
 
@@ -81,6 +91,11 @@ export default class MarketplaceAppClient extends IOClient {
         sellerId: string,
         { account, workspace }: MarketplaceReference
       ) => `/${account}/${workspace}/${baseRoute}/${sellerId}/invoices`,
+      orders: (
+        sellerId: string,
+        { account, workspace }: MarketplaceReference,
+        query: string
+      ) => `/${account}/${workspace}/_v/private/${sellerId}/orders?${query}`,
     }
   }
 }

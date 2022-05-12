@@ -31,3 +31,47 @@ input InvoiceDataInput {
   startDate: String
   endDate: String
 }
+
+input SearchOrdersInput {
+  dateStart: String!
+  dateEnd: String!
+  sellerName: String!
+  page: Int!
+  perpage: Int!
+  status: String
+}
+
+type PaginatedOrders {
+  data: [SellerOrder]
+  paging: OrderPagination
+}
+
+type SellerOrder {
+  orderId: String
+  sellerOrderId: String
+  marketplaceOrderId: String
+  totalComission: Float
+  totalOrderValue: Float
+  status: String
+  statusDescription: String
+  creationDate: String
+  rate: [ItemRate]
+}
+
+type ItemRate {
+  itemId: String
+  nameItem: String
+  rate: Rate
+}
+
+type Rate {
+  productCommissionPercentage: Int
+  freightCommissionPercentage: Int
+}
+
+type OrderPagination {
+  total: Int
+  pages: Int
+  currentPage: Int
+  perPage: Int
+}
