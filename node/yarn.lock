@@ -1620,10 +1620,6 @@ vary@^1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-"vtex.marketplace-financial-commission@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.marketplace-financial-commission@0.3.0/public/@types/vtex.marketplace-financial-commission":
-  version "0.3.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.marketplace-financial-commission@0.3.0/public/@types/vtex.marketplace-financial-commission#555121b1df15b1019fd002f03ebaea5f493831eb"
-
 wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
