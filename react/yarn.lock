@@ -4946,9 +4946,9 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-"vtex.marketplace-financial-commission@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.marketplace-financial-commission@0.2.1-beta.2/public/@types/vtex.marketplace-financial-commission":
-  version "0.2.1-beta.2"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.marketplace-financial-commission@0.2.1-beta.2/public/@types/vtex.marketplace-financial-commission#d896762b12467c0cd537c202ad3f0210abd32941"
+"vtex.marketplace-financial-commission@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.marketplace-financial-commission@0.3.0/public/@types/vtex.marketplace-financial-commission":
+  version "0.3.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.marketplace-financial-commission@0.3.0/public/@types/vtex.marketplace-financial-commission#555121b1df15b1019fd002f03ebaea5f493831eb"
 
 "vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.132.4/public/@types/vtex.render-runtime":
   version "8.132.4"

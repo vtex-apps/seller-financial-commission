@@ -7,7 +7,7 @@ export const sellerOrders = async (
   ctx: Context
 ) => {
   const {
-    vtex: { account: sellerAccount, workspace },
+    vtex: { workspace, account },
     clients: { marketplace, affiliate },
   } = ctx
 
@@ -18,10 +18,12 @@ export const sellerOrders = async (
     workspace,
   }
 
-  const queryString = toQueryString(params.searchOrdersParams)
+  const queryString = toQueryString({
+    ...params.searchOrdersParams,
+    sellerId: account,
+  })
 
   const invoices = await marketplace.sellerOrders(
-    sellerAccount,
     marketplaceReference,
     queryString
   )

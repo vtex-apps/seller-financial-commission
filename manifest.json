@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "seller-financial-commission",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "title": "Financial commission for sellers",
   "description": "",
   "builders": {
@@ -9,6 +9,7 @@
     "docs": "0.x",
     "admin": "0.x",
     "node": "6.x",
+    "messages": "1.x",
     "graphql": "1.x"
   },
   "dependencies": {

@@ -75,3 +75,27 @@ type OrderPagination {
   currentPage: Int
   perPage: Int
 }
+
+type Totalizers {
+  subtotal: Int
+  fee: Int
+  total: Int
+}
+
+type SellerInvoiceData {
+  id: String
+  name: String
+  contact: SellerContact
+}
+
+type SellerContact {
+  phone: String
+  email: String
+}
+
+type Order {
+  orderId: String
+  totalComission: Int
+  totalOrderValue: Int
+  totalOrderRate: Int
+}

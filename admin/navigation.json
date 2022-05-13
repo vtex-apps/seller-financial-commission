@@ -3,11 +3,11 @@
     "adminVersion": 4,
     "section": "orders",
     "titleId": "admin/navigation.section-title",
-    "subSection": "commissionDetail",
+    "subSection": "commissionReport",
     "subSectionItems": [
       {
         "labelId": "admin/navigation.detail-title",
-        "path": "/admin/commission-detail"
+        "path": "/admin/commission-report/detail"
       }
     ]
   }

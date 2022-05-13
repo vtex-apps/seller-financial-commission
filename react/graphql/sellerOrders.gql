@@ -1,5 +1,5 @@
 query SELLER_ORDERS($searchOrdersParams: SearchOrdersInput) {
-  orders(searchOrdersParams: $searchOrdersParams) {
+  orders: sellerOrders(searchOrdersParams: $searchOrdersParams) {
     data {
       orderId
       sellerOrderId
