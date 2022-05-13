@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "seller-financial-commission",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "title": "Financial commission for sellers",
   "description": "",
   "builders": {
