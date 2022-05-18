@@ -99,3 +99,8 @@ type Order {
   totalOrderValue: Int
   totalOrderRate: Int
 }
+
+input SellerInvoiceParams {
+  pagination: Pagination
+  dates: Dates!
+}

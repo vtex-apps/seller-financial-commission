@@ -17,7 +17,10 @@ export const sellerInvoices = async (
     workspace,
   }
 
-  const filter = { ...params.dates, ...params.pagination }
+  const filter = {
+    ...params.sellerInvoiceParams.dates,
+    ...params.sellerInvoiceParams.pagination,
+  }
 
   const invoices = await marketplace.invoicesBySeller(
     sellerAccount,

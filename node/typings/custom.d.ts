@@ -1,13 +1,15 @@
 export type Maybe<T> = T | void
 
 export interface InvoiceFilterParams {
-  pagination: {
-    page: number
-    pageSize: number
-  } | null
-  dates: {
-    startDate: string
-    endDate: string
+  sellerInvoiceParams: {
+    pagination: {
+      page: number
+      pageSize: number
+    } | null
+    dates: {
+      startDate: string
+      endDate: string
+    }
   }
 }
 

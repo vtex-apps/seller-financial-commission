@@ -13,7 +13,7 @@
     "graphql": "1.x"
   },
   "dependencies": {
-    "vtex.marketplace-financial-commission": "0.x"
+    "vtex.components-financial-commission": "0.x"
   },
   "registries": ["smartcheckout"],
   "policies": [

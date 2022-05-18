@@ -2,7 +2,7 @@ type Query {
   """
   Request the marketplace to retrieve current seller's invoices
   """
-  sellerInvoices(pagination: Pagination, dates: Dates!): [InvoiceList]
+  sellerInvoices(sellerInvoiceParams: SellerInvoiceParams): [InvoiceList]
     @cacheControl(scope: PRIVATE, maxAge: LONG)
   """
   Request the marketplace to retrieve an Invoice
