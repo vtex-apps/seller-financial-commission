@@ -1,3 +1,9 @@
+input SellerInvoiceParams {
+  sellerName: String!
+  pagination: Pagination
+  dates: Dates!
+}
+
 input Pagination {
   page: Int
   pageSize: Int
@@ -8,13 +14,9 @@ input Dates {
   endDate: String
 }
 
-type Invoice {
-  status: String
-  invoiceCreatedDate: String
-  seller: SellerInvoiceData
-  orders: [Order]
-  totalizers: Totalizers
-  comment: String
+type ListInvoices {
+  data: [InvoiceList]
+  pagination: PaginationInvoice
 }
 
 type InvoiceList {
@@ -24,62 +26,25 @@ type InvoiceList {
   totalizers: Totalizers
 }
 
-input InvoiceDataInput {
-  id: String
-  name: String
-  email: String
-  startDate: String
-  endDate: String
-}
-
-input SearchOrdersInput {
-  dateStart: String!
-  dateEnd: String!
-  sellerName: String!
-  page: Int!
-  perpage: Int!
-  status: String
-}
-
-type PaginatedOrders {
-  data: [SellerOrder]
-  paging: OrderPagination
-}
-
-type SellerOrder {
-  orderId: String
-  sellerOrderId: String
-  marketplaceOrderId: String
-  totalComission: Float
-  totalOrderValue: Float
-  status: String
-  statusDescription: String
-  creationDate: String
-  rate: [ItemRate]
-}
-
-type ItemRate {
-  itemId: String
-  nameItem: String
-  rate: Rate
-}
-
-type Rate {
-  productCommissionPercentage: Int
-  freightCommissionPercentage: Int
-}
-
-type OrderPagination {
-  total: Int
-  pages: Int
-  currentPage: Int
-  perPage: Int
-}
-
 type Totalizers {
-  subtotal: Int
-  fee: Int
+  subtotal: Float
+  fee: Float
+  total: Float
+}
+
+type PaginationInvoice {
   total: Int
+  page: Int
+  pageSize: Int
+}
+
+type Invoice {
+  status: String
+  invoiceCreatedDate: String
+  seller: SellerInvoiceData
+  orders: [Order]
+  totalizers: Totalizers
+  comment: String
 }
 
 type SellerInvoiceData {
@@ -95,12 +60,60 @@ type SellerContact {
 
 type Order {
   orderId: String
-  totalComission: Int
-  totalOrderValue: Int
-  totalOrderRate: Int
+  sellerOrderId: String
+  totalComission: Float
+  totalOrderValue: Float
+  totalOrderRate: Float
 }
 
-input SellerInvoiceParams {
-  pagination: Pagination
-  dates: Dates!
+input SearchOrdersParams {
+  dateStart: String!
+  dateEnd: String!
+  sellerName: String!
+  page: Int!
+  perpage: Int!
+  status: String
+}
+
+type SearchOrdersResponse {
+  data: [OrderSearch]
+  paging: PagingOrders
+}
+
+type OrderSearch {
+  orderId: String
+  sellerOrderId: String
+  marketplaceOrderId: String
+  totalComission: Float
+  totalOrderValue: Float
+  status: String
+  statusDescription: String
+  creationDate: String
+  rate: [ItemsRateOrdersSearch]
+}
+
+type ItemsRateOrdersSearch {
+  itemId: String
+  nameItem: String
+  rate: RateOrders
+}
+
+type RateOrders {
+  productCommissionPercentage: Float
+  freightCommissionPercentage: Float
+}
+
+type PagingOrders {
+  total: Int
+  pages: Int
+  currentPage: Int
+  perPage: Int
+}
+
+input InvoiceDataInput {
+  id: String
+  name: String
+  email: String
+  startDate: String
+  endDate: String
 }
