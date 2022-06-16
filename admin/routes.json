@@ -2,5 +2,9 @@
   "admin.app.detail": {
     "component": "commissionDetail",
     "path": "/admin/app/commission-detail"
+  },
+  "admin.app.invoiceDetail": {
+    "component": "invoiceSellerDetail",
+    "path": "/admin/app/commission-report/invoice/:id"
   }
 }
