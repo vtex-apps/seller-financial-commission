@@ -1,6 +1,6 @@
 import { AuthType, InstanceOptions, IOClient, IOContext } from '@vtex/api'
 
-import { FlatFilters, InvoiceData } from '../../typings/custom'
+import { FlatFilters, InvoiceData, EmailData } from '../../typings/custom'
 
 const useHttps = !process.env.VTEX_IO
 
@@ -71,6 +71,17 @@ export default class MarketplaceAppClient extends IOClient {
     return this.http.get(this.routes.orders(marketplaceReference, queryString))
   }
 
+  public async getTemplate(marketplaceReference: MarketplaceReference) {
+    return this.http.get(this.routes.template(marketplaceReference))
+  }
+
+  public async sendEmail(
+    marketplaceReference: MarketplaceReference,
+    emailData: EmailData
+  ) {
+    return this.http.post(this.routes.email(marketplaceReference), emailData)
+  }
+
   private get routes() {
     const baseRoute = `_v/policy/financial-commission`
 
@@ -90,6 +101,10 @@ export default class MarketplaceAppClient extends IOClient {
       ) => `/${account}/${workspace}/${baseRoute}/${sellerId}/invoices`,
       orders: ({ account, workspace }: MarketplaceReference, query: string) =>
         `/${account}/${workspace}/_v/policy/private/orders?${query}`,
+      template: ({ account, workspace }: MarketplaceReference) =>
+        `/${account}/${workspace}/${baseRoute}/template`,
+      email: ({ account, workspace }: MarketplaceReference) =>
+        `/${account}/${workspace}/${baseRoute}/mail`,
     }
   }
 }

@@ -117,3 +117,8 @@ input InvoiceDataInput {
   startDate: String
   endDate: String
 }
+
+input EmailDataInput {
+  email: String
+  jsonData: String
+}

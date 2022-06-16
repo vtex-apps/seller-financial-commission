@@ -38,3 +38,8 @@ export interface OrderFilterParams {
     status?: string
   }
 }
+
+export interface EmailData {
+  email: string
+  jsonData: string
+}
