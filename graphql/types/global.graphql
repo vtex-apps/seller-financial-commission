@@ -38,6 +38,8 @@ type PaginationInvoice {
   pageSize: Int
 }
 
+scalar JSONData
+
 type Invoice {
   status: String
   invoiceCreatedDate: String
@@ -45,6 +47,7 @@ type Invoice {
   orders: [Order]
   totalizers: Totalizers
   comment: String
+  jsonData: JSONData
 }
 
 type SellerInvoiceData {
