@@ -5,7 +5,7 @@ query SELLER_INVOICES($sellerInvoiceParams: SellerInvoiceParams) {
       status
       invoiceCreatedDate
       totalizers {
-        subtotal
+        subTotal
         fee
         total
       }
