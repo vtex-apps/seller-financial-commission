@@ -27,7 +27,7 @@ type InvoiceList {
 }
 
 type Totalizers {
-  subtotal: Float
+  subTotal: Float
   fee: Float
   total: Float
 }
