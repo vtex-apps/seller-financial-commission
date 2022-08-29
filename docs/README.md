@@ -2,26 +2,48 @@
 
 # Seller financial commission
 
-<!-- DOCS-IGNORE:start -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- DOCS-IGNORE:end -->
+**Seller Financial commission** provides a way to list all orders and invoices created by a specific seller, filter them by status or by a specific period of time.
+![seller-home](images/home-seller.png)
 
+## **Install:**
 
-<!-- DOCS-IGNORE:start -->
+Install `vtex.seller-financial-commission` in your account.
 
-## Contributors ✨
+```powershell
+vtex install vtex.seller-financial-commission
+```
 
-Thanks goes to these wonderful people:
+## **Features:**
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+- List All Seller Orders and Invoices at the end of the billing cycle. <br/>
+  - Each order is listed with its respective ID, Creation Date, Total Ammount, Total Commission, Rate and Status.
+  - Each invoice is listed with its respective status and with its creation date.
+- Orders and Invoices can be filtered by Status or by creation date
+- Visualize invoice detail.
+  ![invoice-detail](images/image4.png)
+- A copy of the invoice detail can be sent by e-mail. By default the e-mail will be sent to the vendor's address, but this value can be changed
+  ![send-email](images/sendEmail.gif)
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
+## **Components financial commission:**
 
-<!-- DOCS-IGNORE:end -->
+This app allows you create the interface to show the information about the commissions of the sellers.
+
+Add the components financial app in your new apps in the section dependencies of the manifest file.
+
+```powershell
+"dependencies":{
+  "vtex.components-financial-commission": "0.x"
+}
+```
+
+`⚠️` See more details about this app related with the technical topics [Components financial](https://github.com/vtex-apps/components-financial-commission/)
+
+### Important:
+
+`🚫` Please, don't upload the file `yarn.lock`. Remove this file of the `commit`.
+
+`✅` When you clone the project, create your work branch from `develop`.
+
+`✅` Upload your changes by making a `pull request`.
+
+`⚠️` Not forget to update the version and documentation. This last only if this is necessary.
